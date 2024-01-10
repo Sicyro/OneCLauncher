@@ -7,43 +7,41 @@
 <?import javafx.scene.text.*?>
 
 <VBox minHeight="320.0" minWidth="200.0" spacing="5.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.OneCLauncherController">
-   <ToolBar prefHeight="16.0" prefWidth="440.0">
-     <items>
-         <HBox styleClass="hbox-search">
-            <children>
+    <ToolBar prefHeight="16.0" prefWidth="440.0">
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+        <HBox styleClass="hbox-search">
+           <children>
                <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="25.0" styleClass="button-search" text="🔎">
-                  <font>
-                     <Font size="10.0" />
-                  </font>
+                   <font>
+                       <Font size="10.0"/>
+                   </font>
                </Button>
-               <TextField fx:id="searchField" focusTraversable="false" prefHeight="24.0" prefWidth="117.0" promptText="Поиск" styleClass="text-field-search">
-                  <font>
-                     <Font size="11.0" />
-                  </font>
+               <TextField fx:id="searchField" focusTraversable="false" prefHeight="24.0" prefWidth="117.0"
+                          promptText="Поиск" styleClass="text-field-search">
+                   <font>
+                       <Font size="11.0"/>
+                   </font>
                </TextField>
-               <Button fx:id="clearSearchField" mnemonicParsing="false" onAction="#clearSearchTextField" prefHeight="23.0" prefWidth="20.0" styleClass="button-search" text="X" visible="false">
-                  <font>
-                     <Font size="11.0" />
-                  </font>
+               <Button fx:id="clearSearchField" mnemonicParsing="false" onAction="#clearSearchTextField"
+                       prefHeight="23.0" prefWidth="20.0" styleClass="button-search" text="X" visible="false">
+                   <font>
+                       <Font size="11.0"/>
+                   </font>
                </Button>
-            </children>
-         </HBox>
-         <Separator orientation="VERTICAL" prefHeight="5.0" prefWidth="0.0" />
-         <ImageView fx:id="addBase" accessibleRole="BUTTON" fitHeight="17.0" fitWidth="17.0" onMouseClicked="#addBase" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../image/add.png" />
-            </image>
-         </ImageView>
-         <ImageView fitHeight="17.0" fitWidth="17.0" onMouseClicked="#deleteBase" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../image/delete.png" />
-            </image>
-         </ImageView>
-     </items>
-      <opaqueInsets>
-         <Insets />
-      </opaqueInsets>
-   </ToolBar>
+           </children>
+        </HBox>
+        <Separator orientation="VERTICAL" prefHeight="5.0" prefWidth="0.0"/>
+        <ImageView fx:id="addBase" accessibleRole="BUTTON" fitHeight="17.0" fitWidth="17.0" onMouseClicked="#addBase"
+                   pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../image/add.png"/>
+        </ImageView>
+        <ImageView fitHeight="17.0" fitWidth="17.0" onMouseClicked="#deleteBase" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@../../image/delete.png"/>
+        </ImageView>
+    </ToolBar>
    <GridPane prefHeight="300.0" VBox.vgrow="ALWAYS">
      <columnConstraints>
        <ColumnConstraints minWidth="200.0" />
