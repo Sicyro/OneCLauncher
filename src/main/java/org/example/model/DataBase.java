@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class DataBase implements Serializable {
 
-    private static int id = 1;
     private String baseName;
     private String baseServer;
     private String title;
@@ -15,9 +14,9 @@ public class DataBase implements Serializable {
     }
 
     public DataBase(String baseName, String baseServer, String title, String additionalLaunchOptions) {
-        this.baseName = baseName + "_" + id;
+        this.baseName = baseName + "_";
         this.baseServer = baseServer;
-        this.title = title + " " + id++;
+        this.title = title + " ";
         this.additionalLaunchOptions = additionalLaunchOptions;
     }
 

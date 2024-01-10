@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9782e15-41c7-4be3-9db4-0cb810d65e9d" name="Changes" comment="поправил .gitignore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CreationNewDataBaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/CreationNewDataBase.fxml" afterDir="false" />
+    <list default="true" id="b9782e15-41c7-4be3-9db4-0cb810d65e9d" name="Changes" comment="Добавил универсальною форму предупреждения">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/WarningWindowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/WarningWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/OneCLauncherApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/OneCLauncherApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/CreationNewDataBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CreationNewDataBaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/OneCLauncherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/OneCLauncherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/configurator.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/configurator.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/OneCLauncher.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/OneCLauncher.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.OneCLauncher.executor": "Run",
-    "Application.OneCLauncherApplication.executor": "Debug",
+    "Application.OneCLauncherApplication.executor": "Run",
     "Application.org.example.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -159,7 +157,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704741551210</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавил форму создания БД">
+      <option name="closed" value="true" />
+      <created>1704901055680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704901055680</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавил форму создания БД">
+      <option name="closed" value="true" />
+      <created>1704901127270</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704901127270</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,17 +191,8 @@
     <MESSAGE value="Инициализация проекта" />
     <MESSAGE value="Добавил иконки" />
     <MESSAGE value="поправил .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="поправил .gitignore" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/controller/OneCLauncherController.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Добавил форму создания БД" />
+    <MESSAGE value="Добавил универсальною форму предупреждения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил универсальною форму предупреждения" />
   </component>
 </project>

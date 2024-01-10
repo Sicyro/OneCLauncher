@@ -107,10 +107,32 @@ public class OneCLauncherController {
     }
 
     @FXML
-    protected void deleteBase() {
-        // Код для удаления базы из списка
+    protected void deleteBase() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(OneCLauncherApplication.class.getResource("WarningWindow.fxml"));
+        Parent root = fxmlLoader.load();
+        WarningWindowController controller = fxmlLoader.getController();
+
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(listView.getScene().getWindow());
+        dialogStage.setResizable(false);
+        dialogStage.setTitle("Предупреждение!");
+        dialogStage.setScene(new Scene(root));
+
+
         DataBase db = getCurrentLineDB();
-        if (db == null) return;
+        if (db == null) {
+            controller.setLabel("База не выбрана!");
+            controller.setMode(WarningWindowController.Mod.OK);
+            dialogStage.showAndWait();
+            return;
+        }
+
+        controller.setLabel("Вы действительно хотите удалить базу?");
+        dialogStage.showAndWait();
+
+        if (controller.getResult().toLowerCase().equals("cansel")) return;
 
         dataBaseManager.remove(db);
         dataBaseManager.saveToFile();

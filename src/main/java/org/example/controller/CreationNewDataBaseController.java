@@ -18,19 +18,20 @@ public class CreationNewDataBaseController {
     private TextField additionalLaunchOptions;
     @FXML
     private Button close;
-    @FXML
-    private Button save;
 
     @FXML
     protected void close() {
-        Stage stage = (Stage) close.getScene().getWindow();
-        stage.close();
+        closeStage();
     }
 
     @FXML
     protected void save() {
+        closeStage();
+    }
 
-        Stage stage = (Stage) save.getScene().getWindow();
+    private void closeStage() {
+        // Получаем ссылку на текущее окно и закрываем его
+        Stage stage = (Stage) close.getScene().getWindow();
         stage.close();
     }
 
