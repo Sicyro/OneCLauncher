@@ -2,17 +2,25 @@ package org.example.controller;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import org.example.OneCLauncherApplication;
 import org.example.model.DataBase;
 import org.example.model.DataBaseManager;
+
+import java.io.IOException;
 
 public class OneCLauncherController {
 
     private DataBaseManager dataBaseManager = new DataBaseManager();
-    ;
     @FXML
     private ListView<DataBase> listView;
     @FXML
@@ -21,6 +29,8 @@ public class OneCLauncherController {
     private TextField searchField;
     @FXML
     private Button clearSearchField;
+    @FXML
+    private ImageView addBase;
 
     public void initialize() {
         dataBaseManager.loadFromFile();
@@ -40,10 +50,6 @@ public class OneCLauncherController {
                 );
             }
         });
-
-//        searchField.setOnKeyTyped(keyEvent -> {
-//            searchField.requestFocus();
-//        });
     }
 
     @FXML
@@ -81,9 +87,21 @@ public class OneCLauncherController {
     }
 
     @FXML
-    protected void addBase() {
-        // Код для добавления базы в список
-        DataBase db = new DataBase("dev_g", "kratos", "Новая база"); // Замените на реальную логику
+    protected void addBase() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(OneCLauncherApplication.class.getResource("CreationNewDataBase.fxml"));
+        Parent root = fxmlLoader.load();
+        CreationNewDataBaseController controller = fxmlLoader.getController();
+
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(listView.getScene().getWindow());
+        dialogStage.setTitle("Добавление информационной базы");
+        dialogStage.setScene(new Scene(root));
+        dialogStage.showAndWait();
+
+        DataBase db = controller.getDB();
+        if (db == null) return;
+
         dataBaseManager.addDataBase(db);
         dataBaseManager.saveToFile();
     }

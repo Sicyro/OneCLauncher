@@ -13,9 +13,6 @@ public class OneCLauncherApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(OneCLauncherApplication.class.getResource("OneCLauncher.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        // Применяем стиль из файла styles.css
-//        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
-
         stage.setTitle("1C Launcher");
         stage.setScene(scene);
         stage.show();

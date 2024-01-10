@@ -21,7 +21,7 @@
                      <Font size="11.0" />
                   </font>
                </TextField>
-               <Button fx:id="clearSearchField" mnemonicParsing="false" onAction="#clearSearchTextField" prefHeight="23.0" prefWidth="25.0" styleClass="button-search" text="X" visible="false">
+               <Button fx:id="clearSearchField" mnemonicParsing="false" onAction="#clearSearchTextField" prefHeight="23.0" prefWidth="20.0" styleClass="button-search" text="X" visible="false">
                   <font>
                      <Font size="11.0" />
                   </font>
@@ -29,7 +29,7 @@
             </children>
          </HBox>
          <Separator orientation="VERTICAL" prefHeight="5.0" prefWidth="0.0" />
-         <ImageView accessibleRole="BUTTON" fitHeight="17.0" fitWidth="17.0" onMouseClicked="#addBase" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="addBase" accessibleRole="BUTTON" fitHeight="17.0" fitWidth="17.0" onMouseClicked="#addBase" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../../image/add.png" />
             </image>
